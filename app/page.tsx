@@ -1,13 +1,12 @@
 import { getProjects, initializeDatabase } from "./actions";
 import { 
   ArrowUpRight, Github, Linkedin, Mail, 
-  Scissors // Import Scissors dari Lucide khusus buat CapCut
+  Scissors // Import Scissors dari Lucide khusus buat pengganti icon CapCut
 } from "lucide-react";
 
 import Marquee from "react-fast-marquee";
 
 // IMPORT ICON LOGO ASLI (Simple Icons)
-// Hapus SiCapcut dari sini karena menyebabkan error
 import { 
   SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, 
   SiPostgresql, SiGit, SiVercel, 
@@ -79,14 +78,23 @@ export default async function Home() {
                 Hello, I'm <strong>znlumins</strong> aka. <strong>Daffa Ahmad Al Attas</strong>. An IT enthusiast with a passion for website development and creating innovative digital solutions.
               </p>
               <div className="flex gap-4 items-center justify-center md:justify-start">
-                <a href="#contact" className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-                  Contact Me
+                <a href="#projects" className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                  View Work
                 </a>
+                
+                {/* ICON LINK JUMBOTRON (Updated) */}
                 <div className="flex gap-4 px-4 border-l border-white/10 ml-2">
-                  <Github className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
-                  <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
-                  <Mail className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
+                  <a href="https://github.com/znlumins" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/daffa-ahmad-al-attas-824294322/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
+                  </a>
+                  <a href="mailto:daffaahmadalsch@student.ub.ac.id">
+                    <Mail className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition" />
+                  </a>
                 </div>
+
               </div>
             </div>
 
@@ -179,7 +187,7 @@ export default async function Home() {
              I'm always open to discussing product design work or partnership opportunities.
            </p>
            
-           <a href="mailto:daffa@example.com" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition duration-300 mb-16">
+           <a href="mailto:daffaahmadalsch@student.ub.ac.id" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition duration-300 mb-16">
              <Mail size={18} />
              <span>Send me an email</span>
            </a>
@@ -187,9 +195,9 @@ export default async function Home() {
            <footer className="text-gray-600 text-sm flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
               <p>&copy; {new Date().getFullYear()} znlumins. All rights reserved.</p>
               <div className="flex gap-4 mt-4 md:mt-0">
-                 <a href="#" className="hover:text-white transition">Twitter</a>
-                 <a href="#" className="hover:text-white transition">LinkedIn</a>
-                 <a href="#" className="hover:text-white transition">GitHub</a>
+                 <a href="https://x.com/zen_luminscent" className="hover:text-white transition">Twitter</a>
+                 <a href="https://www.linkedin.com/in/daffa-ahmad-al-attas-824294322/" className="hover:text-white transition">LinkedIn</a>
+                 <a href="https://github.com/znlumins" className="hover:text-white transition">GitHub</a>
               </div>
            </footer>
         </section>
